@@ -25,7 +25,7 @@ public class TorchWidgetProvider extends AppWidgetProvider {
             views.setOnClickPendingIntent(R.id.button1, pendingIntent);
 
             appWidgetManager.updateAppWidget(appWidgetIds, views);
-           
+            testMethod();
 
     }
     

@@ -32,4 +32,9 @@ public class TorchWidgetProvider extends AppWidgetProvider {
     public void testMethod(){
     	Log.d("qq", "");
     }
+    
+    public void checkChange(){
+    	Log.d("qq", "");
+    }
+
 }

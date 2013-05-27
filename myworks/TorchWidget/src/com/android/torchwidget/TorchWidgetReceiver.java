@@ -41,6 +41,7 @@ public class TorchWidgetReceiver extends BroadcastReceiver {
 			}
 
 		} else {
+            
 			// Open the default i.e. the first rear facing camera.
 			camera = Camera.open();
 
@@ -48,6 +49,7 @@ public class TorchWidgetReceiver extends BroadcastReceiver {
 				Toast.makeText(context, "no camera", Toast.LENGTH_SHORT).show();
 			} else {
 				// Set the torch flash mode
+                // setting the camera to flash mode
 				Parameters param = camera.getParameters();
 				param.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
 				try {

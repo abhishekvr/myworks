@@ -29,7 +29,11 @@ public class TorchWidgetProvider extends AppWidgetProvider {
 
     }
     
+    public void enableTorchFlash(){
+        
+        //  Use if needed
+        
+    }
 
-    
     
 }

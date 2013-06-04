@@ -23,7 +23,7 @@ public class TorchWidgetProvider extends AppWidgetProvider {
             RemoteViews views = new RemoteViews(context.getPackageName(),
             		R.layout.activity_main);
             views.setOnClickPendingIntent(R.id.button1, pendingIntent);
-//test
+//test secound
             appWidgetManager.updateAppWidget(appWidgetIds, views);
            
 

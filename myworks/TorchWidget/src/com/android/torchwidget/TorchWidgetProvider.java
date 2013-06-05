@@ -29,18 +29,22 @@ public class TorchWidgetProvider extends AppWidgetProvider {
 
     }
 
-    //klhj.
-    //dsyguhiop
-    //tytuyiop
-    //fdtyuhijo
-    //fdghjk
-    //xfghjkb
-    //ghcjvk
-    //gfhcgjk,
-    //fgfxhg
-    //vcbncmv,b
-    //?
-    
+
+    /**
+     
+     
+     
+     Intent receiver = new Intent(context, TorchWidgetReceiver.class);
+     receiver.setAction("COM_FLASHLIGHT");
+     receiver.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds);
+     PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, receiver, 0);
+     
+     RemoteViews views = new RemoteViews(context.getPackageName(),
+     R.layout.activity_main);
+     views.setOnClickPendingIntent(R.id.button1, pendingIntent);
+     //complete again   >>>>>>>>>>>>>
+
+     */
 
 
 

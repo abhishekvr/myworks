@@ -19,13 +19,6 @@ public class TorchWidgetReceiver extends BroadcastReceiver {
 		RemoteViews views = new RemoteViews(context.getPackageName(),
 				R.layout.activity_main);
 
-		// if(isLightOn) {
-		// views.setImageViewResource(R.id.button1,
-		// R.drawable.btn_star_off_normal_holo_light);
-		// } else {
-		// views.setImageViewResource(R.id.button1,
-		// R.drawable.btn_star_off_pressed_holo_light);
-		// }
 
 		AppWidgetManager appWidgetManager = AppWidgetManager
 				.getInstance(context);
@@ -34,6 +27,10 @@ public class TorchWidgetReceiver extends BroadcastReceiver {
 
 		if (isLightOn) {
 			if (camera != null) {
+                
+                // stop camera preview
+                
+                log.i("appwidget","stopping preview");
 				camera.stopPreview();
 				camera.release();
 				camera = null;
@@ -48,10 +45,15 @@ public class TorchWidgetReceiver extends BroadcastReceiver {
 			if (camera == null) {
 				Toast.makeText(context, "no camera", Toast.LENGTH_SHORT).show();
 			} else {
+                
 				// Set the torch flash mode
                 // setting the camera to flash mode
+                
 				Parameters param = camera.getParameters();
 				param.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+                
+                // setting camera parameters will enter catch if flash is not working
+                
 				try {
 					camera.setParameters(param);
 					camera.startPreview();

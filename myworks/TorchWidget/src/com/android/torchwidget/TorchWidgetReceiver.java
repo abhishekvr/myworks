@@ -30,7 +30,6 @@ public class TorchWidgetReceiver extends BroadcastReceiver {
                 
                 // stop camera preview
                 
-                log.i("appwidget","stopping preview");
 				camera.stopPreview();
 				camera.release();
 				camera = null;
